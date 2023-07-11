@@ -1,62 +1,56 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-
-package com.mycompany.library;
+package library1;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
- * @author ngari
+ * @author Issene Halake
  */
-
 public class Library {
-    public static void main(String[] args) {
-        Reservation reserve1 = new Reservation(1, 1001, "Book1");
-        Reservation reserve2 = new Reservation(2, 1002, "Book2");
+    private Map<String, Book> books;
 
-        reserve1.setUserId(3);
-        reserve2.setBookCode("Book3");
-
-        System.out.println("Reservation1:");
-        System.out.println("User Id: " + reserve1.getUserId());
-        System.out.println("Reserve Id: " + reserve1.getReservationId());
-        System.out.println("Book Code: " + reserve1.getBookCode());
-    }
-}
-
-class Reservation {
-    private int reserveId;
-    private String bookCode;
-    private int userId;
-
-    public Reservation(int userId, int reservationId, String bookCode) {
-        this.userId = userId;
-        this.reserveId = reservationId;
-        this.bookCode = bookCode;
+    public Library() {
+        books = new HashMap<>();
     }
 
-    public int getUserId() {
-        return userId;
+    public void addBook(Book book) {
+        books.put(book.getBookCode(), book);
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void removeBook(Book book) {
+        books.remove(book.getBookCode());
     }
 
-    public int getReservationId() {
-        return reserveId;
+    public Book getBookByCode(String bookCode) {
+        return books.get(bookCode);
     }
 
-    public void setReservationId(int reservationId) {
-        this.reserveId = reservationId;
+    public List<Book> searchBooksByTitle(String title) {
+        List<Book> searchResults = new ArrayList<>();
+        for (Book book : books.values()) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                searchResults.add(book);
+            }
+        }
+        return searchResults;
     }
 
-    public String getBookCode() {
-        return bookCode;
-    }
-
-    public void setBookCode(String bookCode) {
-        this.bookCode = bookCode;
+    public List<Book> searchBooksByAuthor(String author) {
+        List<Book> searchResults = new ArrayList<>();
+        for (Book book : books.values()) {
+            if (book.getAuthor().equalsIgnoreCase(author)) {
+                searchResults.add(book);
+            }
+        }
+        return searchResults;
     }
 }
