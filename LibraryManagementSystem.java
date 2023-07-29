@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  *
- * @author Issene Halake
+ * @author @SuhailAbdi
  */
 public class LibraryManagementSystem {
   private Library library;
