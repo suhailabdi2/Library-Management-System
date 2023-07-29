@@ -7,7 +7,7 @@ package library1;
 
 /**
  *
- * @author Issene Halake
+ * @author Richard Ngabo
  */
 public class faculty extends User{
      private String Fdepartment;
