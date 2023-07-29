@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 /**
  *
- * @author Issene Halake
+ * @author RichardNgabo
  */
 public class Reservation {
     
