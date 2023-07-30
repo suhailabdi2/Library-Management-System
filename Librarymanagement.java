@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Issene Halake
+ * @author SuhailAbdi
  */
 public class Librarymanagement {
 
