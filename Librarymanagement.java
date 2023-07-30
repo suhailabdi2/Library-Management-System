@@ -56,8 +56,7 @@ public class Librarymanagement {
     public int getBcode() {
         return Bcode;
     }
-/* when can i pass condition in setter or getter method
-    Generating a random boolean (public boolean nextBoolean()) */
+
     public boolean isBstatus() {
     Random rd = new Random(); // creating Random object
     System.out.println(rd.nextBoolean());
