@@ -7,7 +7,7 @@ package library1;
 
 /**
  *
- * @author Issene Halake
+ * @author Richard
  */
 public class User {
     
