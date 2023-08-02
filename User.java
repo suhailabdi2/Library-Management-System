@@ -18,6 +18,7 @@ public abstract class User {
         this.username = username;
         this.password = password;
     }
+    public abstract String getUserType();
 
     public String getUsername() {
         return username;
